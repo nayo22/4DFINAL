@@ -424,12 +424,41 @@
 	left: 0;
 }
 
+.landing-page .rectangle-20,
+.landing-page .rectangle-21,
+.landing-page .rectangle-22 {
+	position: absolute;
+	width: 57px;
+	height: 48px;
+	background-image: url('./img/Signo.png');
+	background-size: cover;
+	background-position: center;
+	transition: background-image 0.3s, opacity 0.3s;
+	cursor: pointer;
+}
+
 .landing-page .rectangle-20 {
 	position: absolute;
 	width: 57px;
 	height: 48px;
-	top: 145px;
-	left: 474px;
+	top: 90px; /* Ajusta este valor */
+	left: 230px; /* Ajusta este valor */
+}
+
+.landing-page .rectangle-21 {
+	position: absolute;
+	width: 57px;
+	height: 48px;
+	top: 175px; /* Ajusta este valor */
+	left: 230px; /* Ajusta este valor */
+}
+
+.landing-page .rectangle-22 {
+	position: absolute;
+	width: 57px;
+	height: 48px;
+	top: 255px; /* Ajusta este valor */
+	left: 230px; /* Ajusta este valor */
 }
 
 .landing-page .text-wrapper-6 {
@@ -446,22 +475,6 @@
 	line-height: normal;
 }
 
-.landing-page .rectangle-21 {
-	position: absolute;
-	width: 57px;
-	height: 48px;
-	top: 228px;
-	left: 474px;
-}
-
-.landing-page .rectangle-22 {
-	position: absolute;
-	width: 57px;
-	height: 48px;
-	top: 311px;
-	left: 474px;
-}
-
 .landing-page .get-now-buton {
 	display: flex;
 	width: 152px;
@@ -473,9 +486,16 @@
 	position: absolute;
 	top: 62px;
 	left: 892px;
-	background-color: #63a23a;
+	background-color: #63a23a !important;
 	border-radius: 8px;
 	box-shadow: inset 0px -8px 4px #0000006e, inset 0px 8px 4px #ffffff40;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.landing-page .get-now-buton:hover {
+	background-color: #ff69b4 !important;
+	transform: scale(1.05);
 }
 
 .landing-page .text-wrapper-7 {
@@ -870,6 +890,13 @@
 	background-color: #63a23a;
 	border-radius: 8px;
 	box-shadow: inset 0px 8px 4px #ffffff73, inset 0px -8px 4px #00000073;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.landing-page .group-2:hover {
+	background-color: #ff69b4;
+	transform: scale(1.05);
 }
 
 .landing-page .text-wrapper-15 {
@@ -884,4 +911,225 @@
 	letter-spacing: 0;
 	line-height: normal;
 	white-space: nowrap;
+}
+
+.crafting-table .craft-cell {
+	background-image: url('??.png');
+	transition: background-image 0.3s, opacity 0.3s;
+}
+.crafting-table:hover .cell-1,
+.crafting-table:hover .cell-2 {
+	background-image: url('diamante.png');
+}
+.crafting-table:hover .cell-5 {
+	background-image: url('palo.png');
+}
+.crafting-table:hover .craft-result {
+	background-image: url('espada.png');
+}
+
+.landing-page .rectangle-resultado {
+	position: absolute;
+	width: 200px; /* Ajusta según tu diseño */
+	height: 150px; /* Ajusta según tu diseño */
+	top: 128px; /* Ajusta según tu diseño */
+	left: 510px; /* Ajusta según tu diseño */
+	background-image: none;
+	background-size: cover;
+	background-position: center;
+	transition: background-image 0.3s, opacity 0.3s;
+	cursor: pointer;
+}
+
+/* Al hacer hover, aparece la espada */
+.landing-page .rectangle-resultado:hover {
+	background-image: url('./img/espada.png');
+	opacity: 1;
+}
+
+.steve,
+.dragon {
+	position: absolute; /* o ajusta según tu layout */
+	opacity: 0;
+	transition: transform 0.8s cubic-bezier(0.77, 0, 0.18, 1), opacity 0.8s cubic-bezier(0.77, 0, 0.18, 1);
+	will-change: transform, opacity;
+}
+
+.steve {
+	left: 0;
+	bottom: 0;
+	transform: translateX(-150px);
+}
+
+.dragon {
+	right: 0;
+	top: 0;
+	transform: translateX(150px);
+}
+
+/* Cuando se activa la animación */
+.steve.slide-in,
+.dragon.slide-in {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.friends-section .item {
+	opacity: 0;
+	transform: translateY(-30px) scale(0.8);
+	transition: opacity 0.5s, transform 0.5s;
+	position: absolute; /* Ajusta según tu layout */
+}
+
+/* Ajusta la posición de cada elemento */
+.friends-section .manza {
+	top: 60px;
+	right: 200px;
+}
+.friends-section .pastel {
+	top: 150px;
+	right: 320px;
+}
+.friends-section .zanahoria {
+	top: 320px;
+	right: 600px;
+}
+.friends-section .oro {
+	top: 220px;
+	right: 120px;
+}
+.friends-section .arco {
+	top: 300px;
+	right: 250px;
+}
+.friends-section .pocion {
+	top: 380px;
+	right: 120px;
+}
+.friends-section .espada2 {
+	top: 400px;
+	right: 460px;
+}
+
+/* Secuencia de aparición con delay */
+.friends-section:hover .manza {
+	opacity: 1;
+	transform: none;
+	transition-delay: 0.1s;
+}
+.friends-section:hover .pastel {
+	opacity: 1;
+	transform: none;
+	transition-delay: 0.3s;
+}
+.friends-section:hover .zanahoria {
+	opacity: 1;
+	transform: none;
+	transition-delay: 0.5s;
+}
+.friends-section:hover .oro {
+	opacity: 1;
+	transform: none;
+	transition-delay: 0.7s;
+}
+.friends-section:hover .arco {
+	opacity: 1;
+	transform: none;
+	transition-delay: 0.9s;
+}
+.friends-section:hover .pocion {
+	opacity: 1;
+	transform: none;
+	transition-delay: 1.1s;
+}
+.friends-section:hover .espada2 {
+	opacity: 1;
+	transform: none;
+	transition-delay: 1.3s;
+}
+
+.friends-section {
+	position: relative;
+	min-height: 500px; /* Ajusta según tu diseño */
+}
+
+.steve2 {
+	position: absolute;
+	left: 120px; /* Ajusta este valor para acercarlo al borde izquierdo */
+	top: 185px; /* Ajusta este valor para alinearlo con el texto */
+	width: 182px; /* O el tamaño que prefieras */
+	height: 408px; /* O el tamaño que prefieras */
+	z-index: 2;
+	transition: filter 0.2s, width 0.2s, height 0.2s, left 0.2s, top 0.2s;
+}
+
+.steve2:hover {
+	content: url('./img/stevecorre.png');
+	width: 420px; /* Ajusta el tamaño para stevecorre.png */
+	height: 400px; /* Ajusta el tamaño para stevecorre.png */
+	left: 130px; /* Ajusta la posición si es necesario */
+	top: 210px; /* Ajusta la posición si es necesario */
+}
+
+.servers-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px; /* Espacio entre logos */
+	margin-top: 40px;
+}
+
+.server-logo {
+	width: 146px;
+	height: 156px;
+	border-radius: 20px;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 2px 12px #0003;
+	cursor: pointer;
+	transition: box-shadow 0.2s, background-image 0.2s, width 0.3s, height 0.3s, margin 0.3s, z-index 0.2s, transform 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+}
+
+/* Imagen base de cada logo */
+.server-logo.Universo {
+	background-image: url('./img/Universo.png');
+}
+.server-logo.Hypixel {
+	background-image: url('./img/Hypixel.png');
+}
+.server-logo.Ghostly {
+	background-image: url('./img/Ghostly.png');
+}
+.server-logo.Minemen {
+	background-image: url('./img/Minemen.png');
+}
+
+/* Hover: agranda, centra y pone la descripción */
+.server-logo.Universo:hover,
+.server-logo.Hypixel:hover,
+.server-logo.Ghostly:hover,
+.server-logo.Minemen:hover {
+	width: 320px;
+	height: 380px;
+	margin-left: -87px; /* (320-146)/2 = 87 */
+	margin-right: -87px; /* (320-146)/2 = 87 */
+	z-index: 10;
+	transform: scale(1.1);
+}
+
+.server-logo.Universo:hover {
+	background-image: url('./img/UniversoDescripcion.png');
+}
+.server-logo.Hypixel:hover {
+	background-image: url('./img/HypixelDescripcion.png');
+}
+.server-logo.Ghostly:hover {
+	background-image: url('./img/GhostlyDescripcion.png');
+}
+.server-logo.Minemen:hover {
+	background-image: url('./img/MinemenDescripcion.png');
 }
