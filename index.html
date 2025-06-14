@@ -172,5 +172,27 @@
 
 		<!-- Botón para silenciar/des-silenciar -->
 		<div class="music-toggle" id="music-toggle" title="Mute/Unmute"></div>
+
+		<script>
+			const audio = document.getElementById('bg-music');
+			const btn = document.getElementById('music-toggle');
+
+			// Cambia el ícono según mute
+			function updateIcon() {
+				btn.innerHTML = audio.muted ? '🔇' : '🎵';
+			}
+			updateIcon();
+
+			btn.onclick = function () {
+				audio.muted = !audio.muted;
+				updateIcon();
+			};
+
+			// Opcional: para que el audio se reproduzca en algunos navegadores móviles
+			document.body.addEventListener('click', function playOnce() {
+				audio.play();
+				document.body.removeEventListener('click', playOnce);
+			});
+		</script>
 	</body>
 </html>
